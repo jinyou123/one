@@ -5,6 +5,7 @@ import sun.java2d.pipe.SpanShapeRenderer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.SignStyle;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateUti {
@@ -25,5 +26,18 @@ public class DateUti {
             e.printStackTrace();
         }
         return null;
+    }
+
+    //Date日期---》Calendar日历
+    public static Calendar dateToCalendar(Date date){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime( date );
+        return  calendar;
+    }
+
+    //Calendar日历----》Date日期
+    public static Date calendarDate(Calendar calendar){
+
+        return calendar.getTime();
     }
 }
